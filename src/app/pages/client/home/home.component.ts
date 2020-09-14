@@ -50,7 +50,8 @@ export class HomeComponent implements OnInit {
       img: 'assets/img/Wholesale.jpg',
       status: 'Bán hết',
       average: '18%',
-      price: 1000
+      price: 1000,
+      logo: 'assets/img/Panama-Golden-Pineapple-Logo-2.jpg'
     },
     {
       name: 'Panama Golden Pinapple II',
@@ -58,7 +59,8 @@ export class HomeComponent implements OnInit {
       img: 'assets/img/Pineapples.jpg',
       status: 'Bán hết',
       average: '18%',
-      price: 1000
+      price: 1000,
+      logo: 'assets/img/PGP2Logo.png'
     },
     {
       name: 'Ganaderia Pietrasanta II',
@@ -66,7 +68,8 @@ export class HomeComponent implements OnInit {
       img: 'assets/img/11915477_xl.jpg',
       status: 'Bán hết',
       average: '18%',
-      price: 1000
+      price: 1000,
+      logo: ''
     },
     {
       name: 'Valle Verde',
@@ -74,7 +77,8 @@ export class HomeComponent implements OnInit {
       img: 'assets/img/ValleVerdeIcon.jpg',
       status: 'Bán hết',
       average: '18%',
-      price: 1000
+      price: 1000,
+      logo: 'assets/img/Valle-Verde-Logo.png'
     },
     {
       name: 'Peru Citrus & Grapes',
@@ -82,7 +86,8 @@ export class HomeComponent implements OnInit {
       img: 'assets/img/CitrusMandarins.png',
       status: 'Bán hết',
       average: '18%',
-      price: 1000
+      price: 1000,
+      logo: ''
     },
   ]
 

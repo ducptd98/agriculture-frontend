@@ -20,13 +20,15 @@
     <owl-carousel
       [options]="options"
       [carouselClasses]="['owl-theme', 'sliding']">
-      <div class="" style="color: white" *ngFor="let project of openProjects;let i = index">
-        <div style="background: #9DBA76; text-align: center">
-          <h4 style="margin: 0!important;padding-top: 10px !important">{{project.name}}</h4>
-          <span style="color: #000000;padding-bottom: 10px !important;">{{project.address}}</span>
+      <div style="color: white" *ngFor="let project of openProjects;let i = index">
+        <div class="project-header">
+          <h4>{{project.name}}</h4>
+          <span>{{project.address}}</span>
         </div>
         <div [ngStyle]="{background: 'url(\''+project.img+'\')'}" class="image">
-
+          <a href="#" class="postLink">
+            <img [src]="project.logo" alt="brand">
+          </a>
         </div>
         <div class="more">
           <div class="info-line"><span>Cổ phiếu có sẵn</span><span class="goal">1,650</span></div>
