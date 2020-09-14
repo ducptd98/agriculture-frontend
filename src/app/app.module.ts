@@ -18,7 +18,7 @@ import {BrowserModule} from '@angular/platform-browser';
 @NgModule({
   declarations: [
     AppComponent,
-    AdminLayoutComponent
+    AdminLayoutComponent,
   ],
   imports: [
     BrowserAnimationsModule,

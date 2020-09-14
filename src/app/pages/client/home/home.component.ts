@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -24,7 +24,70 @@ export class HomeComponent implements OnInit {
       description: `Bạn có hồ sơ ttheo dõi về kinh doanh nông nghiệp thành công?.Hợp tác các nhà đầu tư của chúng tôi để tài trợ chi dự án mở rộng hoặc dự án phát triển mới của bạn.`
     },
   ];
-  constructor() { }
+  options = {
+    items: 4, dots: false, navigation: false, loop: true, autoplay: true, responsiveClass: true, responsive: {
+      0: {
+        items: 1,
+      },
+      576: {
+        items: 2,
+      },
+      768: {
+        items: 3,
+      },
+      1024: {
+        items: 4,
+      },
+      1280: {
+        items: 4,
+      }
+    }
+  }
+  openProjects = [
+    {
+      name: 'Panama Golden Pinapple',
+      address: 'La Chorrena, Panama',
+      img: 'assets/img/Wholesale.jpg',
+      status: 'Bán hết',
+      average: '18%',
+      price: 1000
+    },
+    {
+      name: 'Panama Golden Pinapple II',
+      address: 'La Chorrena, Panama',
+      img: 'assets/img/Pineapples.jpg',
+      status: 'Bán hết',
+      average: '18%',
+      price: 1000
+    },
+    {
+      name: 'Ganaderia Pietrasanta II',
+      address: 'Monteria, Colombia',
+      img: 'assets/img/11915477_xl.jpg',
+      status: 'Bán hết',
+      average: '18%',
+      price: 1000
+    },
+    {
+      name: 'Valle Verde',
+      address: 'Apartado, Colombia',
+      img: 'assets/img/ValleVerdeIcon.jpg',
+      status: 'Bán hết',
+      average: '18%',
+      price: 1000
+    },
+    {
+      name: 'Peru Citrus & Grapes',
+      address: 'Peru',
+      img: 'assets/img/CitrusMandarins.png',
+      status: 'Bán hết',
+      average: '18%',
+      price: 1000
+    },
+  ]
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

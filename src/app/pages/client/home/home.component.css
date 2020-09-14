@@ -32,7 +32,7 @@
   position: relative;
 }
 
-::ng-deep .text-center{
+::ng-deep .text-center {
   position: absolute !important;
   top: 50% !important;
   left: 50% !important;
@@ -41,3 +41,76 @@
   text-align: center !important;
 }
 
+.image {
+  background-position: center center !important;
+  background-size: cover !important;
+  height: 300px;
+}
+
+.home-projects {
+  text-align: center;
+}
+
+.home-projects h2 {
+  color: #6d9a13;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: 900;
+  line-height: 30px;
+  padding: 15px 0;
+  position: relative;
+  margin: 0;
+}
+
+.home-projects h2:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: -20px;
+  border: 10px solid transparent;
+  border-top-color: #fff;
+  margin-left: -10px;
+  z-index: 9;
+}
+
+.home-projects .info-line {
+  color: #000;
+  display: inline-block;
+  vertical-align: top;
+  padding: 5px 0;
+  width: 100%;
+  font-size: 14px;
+  line-height: 18px;
+  position: relative;
+}
+
+.more {
+  padding: 20px;
+}
+
+.home-projects .info-line:before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  display: block;
+  border-bottom: 2px dotted #555;
+}
+
+.home-projects .info-line span {
+  float: left;
+  background: #fff;
+  padding-right: 5px;
+  position: relative;
+}
+
+.home-projects .info-line span + span {
+  float: right;
+  background: #fff;
+  padding-right: 0;
+  padding-left: 5px;
+  color: #6d9a13;
+}

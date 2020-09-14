@@ -1,5 +1,5 @@
 <div class="">
-  <div style="  background: url('assets/img/MainBG.jpg') no-repeat center center scroll;" class="background-img">
+  <div style="background: url('assets/img/MainBG.jpg') no-repeat center center scroll;" class="background-img">
     <owl-carousel
       [options]="{items: 1, dots: true, navigation: false}"
       [carouselClasses]="['owl-theme', 'sliding','text-center']">
@@ -15,4 +15,28 @@
       </div>
     </owl-carousel>
   </div>
+  <div class="home-projects">
+    <h2> Các dự án mở</h2>
+    <owl-carousel
+      [options]="options"
+      [carouselClasses]="['owl-theme', 'sliding']">
+      <div class="" style="color: white" *ngFor="let project of openProjects;let i = index">
+        <div style="background: #9DBA76; text-align: center">
+          <h4 style="margin: 0!important;padding-top: 10px !important">{{project.name}}</h4>
+          <span style="color: #000000;padding-bottom: 10px !important;">{{project.address}}</span>
+        </div>
+        <div [ngStyle]="{background: 'url(\''+project.img+'\')'}" class="image">
+
+        </div>
+        <div class="more">
+          <div class="info-line"><span>Cổ phiếu có sẵn</span><span class="goal">1,650</span></div>
+          <div class="info-line"><span>Năng suất trung bình 10 năm
+												*</span><span>11.92%</span>
+          </div>
+          <div class="info-line"><span>Đơn vị giá**</span><span>$1,000</span></div>
+        </div>
+      </div>
+    </owl-carousel>
+  </div>
 </div>
+
