@@ -151,7 +151,7 @@
     }
     .dropdown-item:hover,
     .dropdown-item:focus{
-        background-color: $default-color;
+        background-color: $default-bg;
     }
 
     &.dropdown-primary .dropdown-item:hover,
@@ -204,8 +204,8 @@
   content: "";
   display: inline-block;
   position: absolute;
-  left: 5px;
-  top: -10px;
+  left: 30px;
+  top: -9px;
 }
 
 .navbar-nav .dropdown-menu:after,
@@ -220,8 +220,8 @@
   content: "";
   display: inline-block;
   position: absolute;
-  left: 5px;
-  top: -10px;
+  left: 30px;
+  top: -9px;
 }
 
 .dropdown .dropdown-menu.dropdown-notification[x-placement="top-start"]:before,

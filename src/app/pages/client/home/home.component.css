@@ -26,8 +26,18 @@
   opacity: 1;
 }
 
-.backgroud-img {
+.background-img {
   height: 500px;
-  margin-top: -20px;
   background-size: cover !important;
+  position: relative;
 }
+
+::ng-deep .text-center{
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  margin: 0 -50% 0 0 !important;
+  transform: translate(-50%, -50%) !important;
+  text-align: center !important;
+}
+
