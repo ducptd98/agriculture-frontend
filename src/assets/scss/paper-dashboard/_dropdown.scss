@@ -198,14 +198,14 @@
 .card.card-just-text .dropdown .dropdown-menu:before,
 .card-just-text .dropdown .dropdown-menu:before,
 .dropdown-btn .dropdown-menu:before{
-    border-bottom: 11px solid $medium-pale-bg;
-    border-left: 11px solid rgba(0, 0, 0, 0);
-    border-right: 11px solid rgba(0, 0, 0, 0);
-    content: "";
-    display: inline-block;
-    position: absolute;
-    right: 12px;
-    top: -12px;
+  border-bottom: 11px solid $medium-pale-bg;
+  border-left: 11px solid rgba(0, 0, 0, 0);
+  border-right: 11px solid rgba(0, 0, 0, 0);
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 5px;
+  top: -10px;
 }
 
 .navbar-nav .dropdown-menu:after,
@@ -214,14 +214,14 @@
 .card.card-just-text .dropdown .dropdown-menu:after,
 .card-just-text .dropdown .dropdown-menu:after,
 .dropdown-btn .dropdown-menu:after{
-    border-bottom: 11px solid $white-color;
-    border-left: 11px solid rgba(0, 0, 0, 0);
-    border-right: 11px solid rgba(0, 0, 0, 0);
-    content: "";
-    display: inline-block;
-    position: absolute;
-    right: 12px;
-    top: -11px;
+  border-bottom: 11px solid $white-color;
+  border-left: 11px solid rgba(0, 0, 0, 0);
+  border-right: 11px solid rgba(0, 0, 0, 0);
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 5px;
+  top: -10px;
 }
 
 .dropdown .dropdown-menu.dropdown-notification[x-placement="top-start"]:before,

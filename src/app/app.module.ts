@@ -12,6 +12,7 @@ import { AppComponent } from './app.component';
 import { AppRoutes } from './app.routing';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import {BrowserModule} from '@angular/platform-browser';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
   ],
   imports: [
     BrowserAnimationsModule,
+    BrowserModule,
     RouterModule.forRoot(AppRoutes, {
       useHash: true,
     }),

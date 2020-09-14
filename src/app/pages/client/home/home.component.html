@@ -1,1 +1,22 @@
-<p>home works!</p>
+<div class="">
+  <div style="  background: url('assets/img/MainBG.jpg') no-repeat center center scroll;" class="backgroud-img">
+    <div>
+      <owl-carousel
+        [options]="{items: 1, dots: true, navigation: false}"
+        [carouselClasses]="['owl-theme', 'row', 'sliding','text-center']">
+        <div class="container" style="color: white" *ngFor="let title of titles;let i = index">
+          <h2>
+            <span style="font-size: 1rem">{{title.header}}</span><br>
+            <span style="font-weight: bold">{{title.subHeader}}</span>
+          </h2>
+          <div class="more">
+            <p style="font-size: 22px; line-height: 1.2; font-weight: 100;">{{title.description}}</p>
+            <p class="link"><a class="raise" href="#">Tăng vốn</a></p>
+          </div>
+        </div>
+      </owl-carousel>
+    </div>
+  </div>
+
+
+</div>
