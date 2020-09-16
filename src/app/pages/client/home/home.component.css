@@ -44,7 +44,7 @@
 .image {
   background-position: center center !important;
   background-size: cover !important;
-  height: 300px;
+  height: 320px;
   position: relative;
 }
 
@@ -91,8 +91,9 @@
   text-align: center;
   padding: 18px;
 }
+
 .project-header h4 {
-  margin: 0!important;
+  margin: 0 !important;
   padding-top: 10px !important
 }
 
@@ -143,6 +144,7 @@
   z-index: 0;
   opacity: 0;
 }
+
 /*.postLink:before{*/
 /*  content: "";*/
 /*  display: block;*/
@@ -168,16 +170,21 @@
   right: 0;
   bottom: 0;
   margin: auto;
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
+}
+
+.home-projects .project-header h4 {
+  font-size: 1.1rem;
 }
 
 .home-projects .image:hover .postLink,
 .home-projects .project-header:hover .postLink,
-.home-projects .more:hover .postLink{
+.home-projects .more:hover .postLink {
   opacity: 1;
   animation: scale 1s ease-in-out 1;
 }
+
 .home-projects .postLink span {
   font-weight: 710;
 }
@@ -191,4 +198,65 @@
     transform: scale(1);
     transform-origin: 50% 50%;
   }
+}
+
+.hit-section {
+  height: 300px;
+  position: relative;
+  background-size: cover !important;
+  background-position: center bottom !important;
+  background-repeat: repeat !important;
+}
+
+.hit-section .hit-container {
+  height: inherit;
+  background-position: center bottom !important;
+  background-repeat: repeat !important;
+  background-image: url("~assets/img/pathern.png");
+}
+
+.hit-section h3 {
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.hit-section .hit-content {
+  display: flex;
+  height: inherit;
+}
+
+.left-content,
+.right-content {
+  width: 50%;
+  margin: auto;
+  color: white;
+}
+
+.left-trans {
+  position: absolute;
+  top: 25%;
+  right: 10%;
+}
+
+.right-trans {
+  position: absolute;
+  top: 25%;
+  left: 10%;
+}
+
+.hit-section .hit-content .left-content li{
+  margin: 10px;
+  font-size: 1rem;
+}
+.hit-section .hit-content .left-content .more{
+  border: 1px solid;
+  width: 25%;
+  text-align: center;
+  border-radius: 50px;
+  height: 60px;
+  color: white;
+  font-size: 1rem;
 }

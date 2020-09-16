@@ -1,9 +1,23 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, HostBinding, HostListener, OnInit} from '@angular/core';
+import {
+  fadeInLeftOnEnterAnimation,
+  fadeInRightOnEnterAnimation,
+  fadeOutLeftOnLeaveAnimation,
+  fadeOutRightOnLeaveAnimation,
+  fadeInDownOnEnterAnimation
+} from 'angular-animations';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
+  animations: [
+    fadeInLeftOnEnterAnimation(),
+    fadeInRightOnEnterAnimation(),
+    fadeOutLeftOnLeaveAnimation(),
+    fadeOutRightOnLeaveAnimation(),
+    fadeInDownOnEnterAnimation()
+  ]
 })
 export class HomeComponent implements OnInit {
   titles = [
@@ -34,9 +48,6 @@ export class HomeComponent implements OnInit {
       },
       768: {
         items: 3,
-      },
-      1024: {
-        items: 4,
       },
       1280: {
         items: 4,
@@ -91,10 +102,29 @@ export class HomeComponent implements OnInit {
     },
   ]
 
+  animateLeft = false;
+  animateRight = false;
+
   constructor() {
   }
 
   ngOnInit(): void {
+  }
+
+  onMouseOver(name): void {
+    console.log('-> name', name);
+    if (name === 'left') {
+      this.animateLeft = true;
+      this.animateRight = false;
+    } else {
+      this.animateLeft = false;
+      this.animateRight = true;
+    }
+  }
+
+  onMouseLeave(): void {
+    this.animateLeft = false;
+    this.animateRight = false;
   }
 
 }

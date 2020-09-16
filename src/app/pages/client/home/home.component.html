@@ -40,5 +40,57 @@
       </div>
     </owl-carousel>
   </div>
+  <div class="hit-section" (mouseleave)="onMouseLeave()" style="background: url('assets/img/CocoSprout.jpg')">
+    <div class="hit-container">
+      <div class="hit-header">
+      </div>
+      <div class="hit-content">
+        <div class="left-content" (mouseenter)="onMouseOver('left')">
+          <h3 [hidden]="animateRight" [@fadeInDownOnEnter]>
+            Nhà đầu tư
+          </h3>
+          <div id="left" *ngIf="animateLeft" class="list-content" [@fadeInLeftOnEnter] [class.left-trans]="animateLeft">
+            <ol class="listItems">
+              <li class="item">Chọn 1 dự án</li>
+              <li class="item">Tài liệu được cấp với chữ kí điện tử</li>
+              <li class="item">Phương thức thanh toán (Tiền mặt, IRA, Niềm tin,
+                hoặc thứ
+                giá trị khác)
+              </li>
+              <li class="item">Nhận cổ phiếu trực tiếp và / hoặc
+                tái đầu tư tiền thu được
+              </li>
+            </ol>
+            <div class="more">
+              <p class="details"><a href="#" style="color: white !important;">Chi tiết hơn</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="right-content" (mouseenter)="onMouseOver('right')">
+          <h3 [hidden]="animateLeft" [@fadeInDownOnEnter]>
+            Chủ vườn
+          </h3>
+          <div id="right" *ngIf="animateRight" class="list-content" [@fadeInRightOnEnter] [class.right-trans]="animateRight">
+            <div class="listItems">
+              <div class="item item1">Chọn 1 dự án</div>
+              <div class="item item2">Tài liệu được cấp với chữ kí điện tử</div>
+              <div class="item item3">Phương thức thanh toán (Tiền mặt, IRA, Niềm tin,
+                hoặc thứ
+                giá trị khác)
+              </div>
+              <div class="item item4">Nhận cổ phiếu trực tiếp và / hoặc
+                tái đầu tư tiền thu được
+              </div>
+            </div>
+            <div class="more">
+              <p class="details"><a href="#" style="color: white !important;">Chi tiết hơn</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
