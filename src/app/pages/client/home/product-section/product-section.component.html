@@ -1,1 +1,18 @@
-<p>product-section works!</p>
+<div class="products-section">
+  <h2> Các sản phẩm đặc trưng</h2>
+  <h3> Những sản phẩm này có sẵn trong các dự án để tạo ra cổ tức dọc theo chuỗi cung ứng</h3>
+  <div style="padding-bottom: 20px">
+    <owl-carousel
+      [options]="options"
+      [carouselClasses]="['owl-theme', 'sliding','carousel']">
+      <div style="color: white; text-align: center" *ngFor="let product of  products;let i = index">
+        <div class="img-container">
+          <img [src]="product.img" alt="logo">
+        </div>
+        <div>
+          {{product.title}}
+        </div>
+      </div>
+    </owl-carousel>
+  </div>
+</div>

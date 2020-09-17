@@ -1,0 +1,51 @@
+.products-section {
+  text-align: center;
+  background: url("~assets/img/SupplyChainDark.jpg") no-repeat;
+  background-position: center center !important;
+  background-size: cover !important;
+
+  h2 {
+    color: #6d9a13;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 900;
+    line-height: 30px;
+    padding: 15px 0;
+    position: relative;
+    margin: 0;
+  }
+
+  h3 {
+    font-weight: 300;
+    color: #fff;
+    font-size: 20px;
+    font-style: italic;
+    margin: 0 0 60px;
+  }
+
+  .img-container {
+    display: inline-block;
+    vertical-align: top;
+    border: 1px solid #89816c;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    width: 120px;
+    height: 122px;
+    padding: 12px 0 15px;
+
+    img {
+      border: 0;
+      max-width: 100%;
+    }
+  }
+  .img-container:hover {
+    background-color: #f15929;
+    border-color: #f15929;
+  }
+}
+
+::ng-deep .owl-carousel .owl-item img {
+  display: inherit;
+  width: auto;
+}
