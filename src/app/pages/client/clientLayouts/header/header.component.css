@@ -1,3 +1,7 @@
 ::ng-deep .nav-item > a:hover{
   color:#6d9a13 !important;
 }
+::ng-deep .navbar-toggle {
+  width: auto !important;
+  height: auto !important;
+}

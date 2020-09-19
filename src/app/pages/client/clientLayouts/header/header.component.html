@@ -1,4 +1,5 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" [class.bg-transparent]="url === '/' || url === '/home'"
+     [class.bg-dark]="url !== '/' && url !== '/home'">
   <div class="container border-bottom">
     <a class="navbar-brand" href="#">
       <img src="assets/img/Farmfolio.png" alt="logo">
@@ -14,7 +15,7 @@
           <a class="nav-link" href="#">Trang chủ <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Đầu tư</a>
+          <a class="nav-link" [routerLink]="['/home/list']">Đầu tư</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"

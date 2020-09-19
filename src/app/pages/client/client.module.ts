@@ -6,6 +6,8 @@ import {HomeComponent} from './home/home.component';
 import { HeaderComponent } from './clientLayouts/header/header.component';
 import { FooterComponent } from './clientLayouts/footer/footer.component';
 import {HomeModule} from './home/home.module';
+import {ProductListModule} from './product-list/product-list.module';
+import {ProductListComponent} from './product-list/product-list.component';
 
 const routes: Routes = [
   {
@@ -15,6 +17,10 @@ const routes: Routes = [
       {
         path: '',
         component: HomeComponent,
+      },
+      {
+        path: 'list',
+        component: ProductListComponent,
       }
     ]
   }
@@ -29,6 +35,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     HomeModule,
+    ProductListModule,
     RouterModule.forChild(routes)
   ]
 })
