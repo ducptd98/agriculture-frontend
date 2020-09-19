@@ -1,5 +1,12 @@
-#sidebar-wrapper .sidebar-heading {
-  padding: 0.875rem 2.25rem 0.875rem 1.25rem;
-  font-size: 1.5rem;
-  width: max-content;
+#sidebar-wrapper{
+  .sidebar-heading {
+    padding: 0.875rem 2.25rem 0.875rem 1.25rem;
+    font-size: 1.5rem;
+    width: max-content;
+  }
+  .list-group a:hover {
+    background: #607C22 !important;
+    color: white !important;
+  }
 }
+
