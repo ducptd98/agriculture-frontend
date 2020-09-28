@@ -1,0 +1,12 @@
+<div class="">
+  <img class="img-thumbnail" style="height: 270px" [src]="selected" alt="Card image cap">
+</div>
+<div class="mt-3" style="padding-left: 0.85rem">
+  <owl-carousel
+    [options]="options"
+    [carouselClasses]="['owl-theme', 'sliding','row']">
+    <div *ngFor="let item of data;let i = index">
+      <img style="height: 100px" class="img-thumbnail" [src]="item" alt="Second slide" (click)="selected = item">
+    </div>
+  </owl-carousel>
+</div>

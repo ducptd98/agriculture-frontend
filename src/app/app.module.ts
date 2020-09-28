@@ -13,6 +13,7 @@ import { AppRoutes } from './app.routing';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import {BrowserModule} from '@angular/platform-browser';
+import {OwlModule} from 'ngx-owl-carousel';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import {BrowserModule} from '@angular/platform-browser';
     NavbarModule,
     ToastrModule.forRoot(),
     FooterModule,
-    FixedPluginModule
+    FixedPluginModule,
+    OwlModule
   ],
   providers: [],
   bootstrap: [AppComponent]

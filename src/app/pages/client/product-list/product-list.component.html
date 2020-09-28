@@ -7,8 +7,15 @@
     <div class="product-content">
       <div class="container-fluid">
         <h1 class="mt-4">Simple Sidebar</h1>
-        <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will change.</p>
-        <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>. The top navbar is optional, and just for demonstration. Just create an element with the <code>#menu-toggle</code> ID which will toggle the menu when clicked.</p>
+        <div class="list-group">
+          <a (click)="navigate(2)" class="list-group-item list-group-item-action active">
+            Cras justo odio
+          </a>
+          <a (click)="navigate(2)" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+          <a (click)="navigate(2)" class="list-group-item list-group-item-action">Morbi leo risus</a>
+          <a (click)="navigate(2)" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+          <a (click)="navigate(2)" class="list-group-item list-group-item-action disabled">Vestibulum at eros</a>
+        </div>
       </div>
     </div>
   </div>

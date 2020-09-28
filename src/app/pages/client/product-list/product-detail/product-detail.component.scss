@@ -1,0 +1,16 @@
+.background-img {
+  height: 500px;
+  background-size: cover !important;
+  position: relative;
+}
+.product-content{
+  min-width: 100%;
+}
+.yellow {
+  color: #ffe400 !important;
+}
+::ng-deep .dropdown.show .dropdown-menu[x-placement=bottom-start],
+.dropup.show .dropdown-menu[x-placement=bottom-start],
+.bootstrap-select.show .dropdown-menu[x-placement=bottom-start] {
+  transform: translate3d(-20px, 24px, 0) !important;
+}

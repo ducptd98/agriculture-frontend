@@ -8,6 +8,7 @@ import { FooterComponent } from './clientLayouts/footer/footer.component';
 import {HomeModule} from './home/home.module';
 import {ProductListModule} from './product-list/product-list.module';
 import {ProductListComponent} from './product-list/product-list.component';
+import {ProductDetailComponent} from './product-list/product-detail/product-detail.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
       {
         path: 'list',
         component: ProductListComponent,
+      },
+      {
+        path: ':id',
+        component: ProductDetailComponent
       }
     ]
   }
