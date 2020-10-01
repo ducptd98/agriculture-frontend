@@ -13,26 +13,30 @@ import { AppRoutes } from './app.routing';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import {BrowserModule} from '@angular/platform-browser';
+import {OwlModule} from 'ngx-owl-carousel';
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    AdminLayoutComponent,
-  ],
-  imports: [
-    BrowserAnimationsModule,
-    BrowserModule,
-    RouterModule.forRoot(AppRoutes, {
-      useHash: true,
-    }),
-    SidebarModule,
-    NavbarModule,
-    ToastrModule.forRoot(),
-    FooterModule,
-    FixedPluginModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        AdminLayoutComponent,
+    ],
+    imports: [
+        BrowserAnimationsModule,
+        BrowserModule,
+        RouterModule.forRoot(AppRoutes, {
+            useHash: true,
+            onSameUrlNavigation: 'reload',
+            scrollPositionRestoration: 'enabled'
+        }),
+        SidebarModule,
+        NavbarModule,
+        ToastrModule.forRoot(),
+        FooterModule,
+        FixedPluginModule,
+        OwlModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
