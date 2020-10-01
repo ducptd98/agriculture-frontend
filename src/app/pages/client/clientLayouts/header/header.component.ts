@@ -1,6 +1,7 @@
 import {Component, HostListener, OnInit} from '@angular/core';
 import {NavigationEnd, NavigationStart, Router} from '@angular/router';
 import {filter} from 'rxjs/operators';
+import {ViewportScroller} from '@angular/common';
 
 @Component({
   selector: 'client-header',
@@ -10,42 +11,33 @@ import {filter} from 'rxjs/operators';
 export class HeaderComponent implements OnInit {
   url: string;
 
-  @HostListener('window:scroll', ['$event'])
-  onWindowScroll(e) {
-    const element = document.querySelector('.navbar');
-    if (this.url === '/home' || this.url === '/') {
-      if (window.pageYOffset > element.clientHeight) {
-        element.classList.remove('bg-transparent');
-        element.classList.add('bg-dark');
-      } else {
-        element.classList.remove('bg-dark');
-        element.classList.add('bg-transparent');
-      }
-    }
-  }
+  // @HostListener('window:scroll', ['$event'])
+  // onWindowScroll(e) {
+  //   const element = document.querySelector('.navbar');
+  //   if (this.url === '/home' || this.url === '/') {
+  //     if (window.pageYOffset > element.clientHeight) {
+  //       element.classList.remove('bg-transparent');
+  //       element.classList.add('bg-dark');
+  //     } else {
+  //       element.classList.remove('bg-dark');
+  //       element.classList.add('bg-transparent');
+  //     }
+  //   }
+  // }
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private viewPortcroller: ViewportScroller) {
 
   }
 
   ngOnInit(): void {
     console.log(this.router.url);
     this.url = this.router.url
-    this.router.events.pipe(
-      filter(event => event instanceof NavigationEnd),
-    ).subscribe((event: NavigationEnd) => {
-      console.log(event.url);
-      this.url = event.url;
-      const element = document.querySelector('.navbar');
-      if (this.url !== '/') {
-        element.classList.remove('bg-transparent');
-        element.classList.add('bg-dark');
-      } else {
-        element.classList.remove('bg-dark');
-        element.classList.add('bg-transparent');
-      }
-
-    });
+      this.router.events.subscribe((evt) => {
+        if (!(evt instanceof NavigationEnd)) {
+          return;
+        }
+        this.viewPortcroller.scrollToPosition([0, 500]);
+      });
   }
 
 }

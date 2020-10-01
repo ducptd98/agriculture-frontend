@@ -1,7 +1,7 @@
 <div style="background: url('assets/img/trust.jpeg') no-repeat center center scroll;" class="background-img">
 
 </div>
-<div class="container">
+<div class="container bg-white">
   <div class="breadcrumb">Trang chủ > Rau, củ, quả > Trái cây tươi</div>
   <div class="d-flex">
     <div class="product-content">
@@ -31,18 +31,9 @@
             <div class="d-flex justify-content-between">Giao hàng từ: <span>Đất Đỏ-Bà Rịa-Vũng Tàu</span></div>
             <div class="d-flex justify-content-between">
               Đến:
-              <div class="dropdown ">
-                <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
-                   aria-haspopup="true" aria-expanded="false">
-                  Chọn địa điểm:
-                </a>
+              <ng-select [items]="provinces" placeholder="Chọn địa điểm">
+              </ng-select>
 
-                <div class="dropdown-menu custom-dropdown" aria-labelledby="dropdownMenuLink">
-                  <a class="dropdown-item" href="#">Bà Rại Vũng Tàu</a>
-                  <a class="dropdown-item" href="#">TP.Hồ Chí Minh</a>
-                  <a class="dropdown-item" href="#">Đồng Tháp</a>
-                </div>
-              </div>
             </div>
             <div>
               <i class="d-flex justify-content-between">Phí vận chuyển: <span class="text-danger">Khu vực không hỗ trợ dịch vụ</span></i>
@@ -70,11 +61,11 @@
                 </div>
               </div>
               <div class="row mt-2">
-                <div class="col-3 text-center" style="padding: 0 !important;font-size: 12px">1+ năm</div>
+                <div class="col-3 textCenter" style="padding: 0 !important;font-size: 12px">1+ năm</div>
                 <div class="col-9" style="padding: 0 !important;font-size: 12px">Hơp tác cùng nông sản số</div>
               </div>
               <div class="row mt-2">
-                <div class="col-3 text-center" style="padding: 0 !important;">
+                <div class="col-3 textCenter" style="padding: 0 !important;">
                   <a href="#" style="font-size: 12px">
                     <img src="assets/img/certifi.png" alt="" style="height: 39px;width: auto; padding: 0 !important;">
                   </a>
@@ -85,7 +76,7 @@
                 <button class="btn btn-success w-100 ml-2 mr-2">XEM SHOP</button>
               </div>
               <div class="row mt-2">
-                <div class="col-3 text-center" style="padding: 0 !important;">
+                <div class="col-3 textCenter" style="padding: 0 !important;">
                   <a href="#" style="font-size: 12px">
                     <img src="assets/img/certifi.png" alt="" style="height: 39px;width: auto; padding: 0 !important;">
                   </a>
@@ -95,7 +86,7 @@
             </div>
             <div class="contact border mt-2 mr-1" style="padding: 1rem">
               <div class="row pt-1 pb-1 pl-1">
-                <div class="col-3" style="padding: 0 !important;">
+                <div class="col-3" style="padding: 0 !important; text-align: center; margin: auto">
                   <a href="#">
                     <i class="fa fa-phone" style="font-size: 1.5rem"></i>
                   </a>
@@ -106,7 +97,7 @@
                 </div>
               </div>
               <div class="row mt-2 pr-1 pl-1">
-                <div class="col-3" style="padding: 0 !important;">
+                <div class="col-3" style="padding: 0 !important; text-align: center; margin: auto">
                   <a href="#">
                     <i class="fa fa-envelope" style="font-size: 1.5rem"></i>
                   </a>
@@ -127,4 +118,61 @@
       </div>
     </div>
   </div>
+</div>
+<div class="container bg-white mt-4 pt-4">
+  <div class="row">
+    <div class="col-6">
+      <ngb-tabset [destroyOnHide]="false">
+        <ngb-tab>
+          <ng-template ngbTabTitle>
+            <h6>Mô tả sản phẩm</h6>
+          </ng-template>
+          <ng-template ngbTabContent>
+            <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth
+              master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh
+              dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum
+              iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+          </ng-template>
+        </ngb-tab>
+        <ngb-tab>
+          <ng-template ngbTabTitle>
+            <h6>Nhà sản xuất</h6>
+          </ng-template>
+          <ng-template ngbTabContent>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid.
+            <p>Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table
+              craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl
+              cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia
+              yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean
+              shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero
+              sint qui sapiente accusamus tattooed echo park.</p>
+          </ng-template>
+        </ngb-tab>
+      </ngb-tabset>
+    </div>
+    <div class="col-6">
+      <h6>Địa chỉ người bán</h6>
+    </div>
+  </div>
+</div>
+<div class="container bg-white mt-4 pt-4">
+  <h6>BÌNH LUẬN</h6>
+  <div class="row">
+    <p>Plugin bình luận fb</p>
+  </div>
+</div>
+<div class="container bg-white mt-5 pt-4">
+  <h6>ĐÁNH GIÁ SẢN PHẨM</h6>
+  <hr>
+  <div class="row">
+    <app-comment></app-comment>
+  </div>
+  <div class="row">
+    <app-comment></app-comment>
+  </div>
+  <form>
+    <textarea style="width: 100%">Nhập nội dung đánh giá ở đây</textarea>
+    <ngb-rating max="5" style="font-size: 2rem;color: #FDE16D; border: #000000"></ngb-rating>
+    <br>
+    <button class="btn btn-primary">Đánh giá</button>
+  </form>
 </div>

@@ -1,13 +1,5 @@
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top" [class.bg-transparent]="url === '/' || url === '/home'"
-     [class.bg-dark]="url !== '/' && url !== '/home'">
+<nav class="navbar navbar-expand navbar-dark bg-default" style="padding: 0; margin-bottom: 0">
   <div class="container border-bottom">
-    <a class="navbar-brand" href="#">
-      <img src="assets/img/Farmfolio.png" alt="logo">
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto">
@@ -34,5 +26,26 @@
         </li>
       </ul>
     </div>
+  </div>
+</nav>
+<nav class="navbar navbar-expand navbar-dark position-sticky bg-dark" style="padding: 0; margin-bottom: 0; top: 0; z-index: 10">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="assets/img/Farmfolio.png" alt="logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+   <div class="">
+     <app-search-cmp></app-search-cmp>
+   </div>
+    <a href="#" class="position-relative" style="cursor: pointer">
+      <i class="fa fa-shopping-cart text-white " style="font-size: 1.8rem" aria-hidden="true">
+      </i>
+      <div class="position-absolute" style="top: 0; left: 80%">
+        <span class="badge badge-pill badge-danger" style="font-size: small;padding-top: 6px">10</span>
+      </div>
+    </a>
   </div>
 </nav>

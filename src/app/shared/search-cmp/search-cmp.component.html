@@ -1,0 +1,17 @@
+<form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+  <div class="search-new-area">
+    <div class="choice-type">
+      <ng-select formControlName="typeTerm" [items]="type" bindLabel="name" placeholder="Chon loai" style="height: 100%;"></ng-select>
+    </div>
+    <div class="input-type">
+      <input formControlName="searchTerm" type="text" name="keyword" placeholder="Nhập từ khóa tìm kiếm..." value="" data-load="2" autocomplete="off"
+             id="searchInput">
+      <i class="fa fa-search"></i>
+      <div class="box-searchResults">
+        <div id="searchResults" class="search-results">
+        </div>
+      </div>
+    </div>
+    <button id="search-all" type="submit" class="btn btn-primary m-0">Tìm kiếm</button>
+  </div>
+</form>

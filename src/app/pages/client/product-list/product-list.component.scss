@@ -6,3 +6,36 @@
 .product-content{
   min-width: 100%;
 }
+::ng-deep .actived {
+  background-color: #28a745 !important;
+  color: white !important;
+}
+.product-card-img{
+  transition: all 1s;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+.card-title{
+  cursor: pointer;
+  &:hover{
+    color: #6d9a13;
+  }
+}
+.star {
+  position: relative;
+  display: inline-block;
+  font-size: 1.5rem;
+  color: #d3d3d3;
+}
+.full {
+  color: yellow;
+  fill: yellow ;
+}
+.half {
+  position: absolute;
+  display: inline-block;
+  overflow: hidden;
+  color: yellow;
+  fill: yellow ;
+}

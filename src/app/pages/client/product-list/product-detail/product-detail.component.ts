@@ -6,6 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product-detail.component.scss']
 })
 export class ProductDetailComponent implements OnInit {
+  provinces = [
+    'TP.Hồ Chí Minh',
+    'Bà Rịa Vũng Tàu',
+    'Đồng Tháp',
+  ]
   constructor() { }
 
   ngOnInit(): void {

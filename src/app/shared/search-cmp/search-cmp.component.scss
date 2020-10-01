@@ -1,0 +1,28 @@
+.search-new-area {
+  display: flex;
+  border: 2px solid #17a349;
+  height: 40px;
+  .input-type{
+    position: relative;
+    input {
+      border-top: 0px;
+      border-bottom: 0px;
+      border-radius: 0px;
+      height: 100%;
+      padding-left: 30px;
+      border-color: #dedede;
+      margin-right: 0px;
+      padding-right: 22px;
+    }
+    i{
+      font-size: 1.2rem;
+      position: absolute;
+      top: 25%;
+      left: 3%;
+    }
+  }
+}
+::ng-deep .ng-select-container{
+  height: 100% !important;
+  border-radius: 0 !important;
+}
