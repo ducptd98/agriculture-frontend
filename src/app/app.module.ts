@@ -1,3 +1,4 @@
+import { NavbarModule } from './shared/navbar/navbar.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
@@ -31,6 +32,7 @@ import {OwlModule} from 'ngx-owl-carousel';
         SidebarModule,
         ToastrModule.forRoot(),
         FooterModule,
+        NavbarModule,
         FixedPluginModule,
         OwlModule
     ],
