@@ -1,0 +1,54 @@
+#child {
+  img:hover{
+    cursor: pointer;
+  }
+  img{
+    height: auto;
+  }
+}
+.owl-stage {
+  display: flex;
+}
+.owl-item {
+  display: flex;
+  flex: 1;
+}
+.thumnail{
+  height: inherit;
+  width: inherit
+}
+.card {
+  #left{
+    color: blue;
+    top: 50%;
+    font-size: 2rem;
+    left: 0;
+  }
+  #right{
+    color: white;
+    right: 0;
+    top: 50%;
+    font-size: 2rem;
+  }
+  .triangle-left {
+    width: 0;
+    height: 0;
+    border-top: 25px solid transparent;
+    border-right: 50px solid #555;
+    border-bottom: 25px solid transparent;
+  }
+  .triangle-left:hover{
+    cursor: pointer;
+  }
+  .triangle-right {
+    width: 0;
+    height: 0;
+    border-top: 25px solid transparent;
+    border-left: 50px solid #555;
+    border-bottom: 25px solid transparent;
+  }
+  .triangle-right:hover{
+    cursor: pointer;
+  }
+}
+

@@ -1,0 +1,27 @@
+.background-img {
+  height: 500px;
+  background-size: cover !important;
+  position: relative;
+}
+.product-content{
+  min-width: 100%;
+}
+.yellow {
+  color: #ffe400 !important;
+}
+::ng-deep .dropdown.show .dropdown-menu[x-placement=bottom-start],
+.dropup.show .dropdown-menu[x-placement=bottom-start],
+.bootstrap-select.show .dropdown-menu[x-placement=bottom-start] {
+  transform: translate3d(-20px, 24px, 0) !important;
+}
+// .bootstrap-select button{
+//   background-color: transparent !important;
+//   color: #000 !important;
+// }
+.textCenter{
+  text-align: center !important;
+}
+::ng-deep .dropdown-item.active, .dropdown-item:active{
+  background-color: #6d9a13 !important;
+  color: white;
+}

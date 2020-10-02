@@ -1,12 +1,5 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
+<nav class="navbar navbar-expand navbar-dark bg-default" style="padding: 0; margin-bottom: 0">
   <div class="container border-bottom">
-    <a class="navbar-brand" href="#">
-      <img src="assets/img/Farmfolio.png" alt="logo">
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto">
@@ -14,7 +7,7 @@
           <a class="nav-link" href="#">Trang chủ <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Đầu tư</a>
+          <a class="nav-link" [routerLink]="['/home/list']">Đầu tư</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -29,9 +22,55 @@
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Về chúng tôi</a>
+          <a class="nav-link" (click)="openModal(login)">Đăng nhập</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="openModal(register)">Đăng kí</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
+<nav class="navbar navbar-expand navbar-dark position-sticky bg-dark" style="padding: 0; margin-bottom: 0; top: 0; z-index: 10">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="assets/img/Farmfolio.png" alt="logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+   <div class="">
+     <app-search-cmp></app-search-cmp>
+   </div>
+    <a href="#" class="position-relative" style="cursor: pointer">
+      <i class="fa fa-shopping-cart text-white " style="font-size: 1.8rem" aria-hidden="true">
+      </i>
+      <div class="position-absolute" style="top: 0; left: 80%">
+        <span class="badge badge-pill badge-danger" style="font-size: small;padding-top: 6px">10</span>
+      </div>
+    </a>
+  </div>
+</nav>
+
+<ng-template #register let-modal>
+  <div class="modal-header">
+    <button type="button" class="close" aria-label="Close" (click)="closeModal()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <app-register (loginEvt)="openRegisterOrLogin(login)"></app-register>
+  </div>
+</ng-template>
+
+<ng-template #login let-modal>
+  <div class="modal-header">
+    <button type="button" class="close" aria-label="Close" (click)="closeModal()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <app-login (registerEvt)="openRegisterOrLogin(register)"></app-login>
+  </div>
+</ng-template>

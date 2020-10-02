@@ -3,7 +3,7 @@
     <owl-carousel
       [options]="{items: 1, dots: true, navigation: false}"
       [carouselClasses]="['owl-theme', 'sliding','text-center']">
-      <div class="container" style="color: white" *ngFor="let title of titles;let i = index">
+      <div class="container mt-5" style="color: white" *ngFor="let title of titles;let i = index">
         <h2>
           <span style="font-size: 1rem">{{title.header}}</span><br>
           <span style="font-weight: bold">{{title.subHeader}}</span>

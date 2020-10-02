@@ -6,6 +6,11 @@ import {HomeComponent} from './home/home.component';
 import { HeaderComponent } from './clientLayouts/header/header.component';
 import { FooterComponent } from './clientLayouts/footer/footer.component';
 import {HomeModule} from './home/home.module';
+import {ProductListModule} from './product-list/product-list.module';
+import {ProductListComponent} from './product-list/product-list.component';
+import {ProductDetailComponent} from './product-list/product-detail/product-detail.component';
+import {RegisterComponent} from '../register/register.component';
+import {LoginComponent} from '../login/login.component';
 
 const routes: Routes = [
   {
@@ -15,6 +20,14 @@ const routes: Routes = [
       {
         path: '',
         component: HomeComponent,
+      },
+      {
+        path: 'list',
+        component: ProductListComponent,
+      },
+      {
+        path: ':id',
+        component: ProductDetailComponent
       }
     ]
   }
@@ -25,11 +38,18 @@ const routes: Routes = [
     ClientComponent,
     HeaderComponent,
     FooterComponent,
+    RegisterComponent,
+    LoginComponent,
+  ],
+  exports: [
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
     HomeModule,
-    RouterModule.forChild(routes)
+    ProductListModule,
+    RouterModule.forChild(routes),
   ]
 })
 export class ClientModule { }

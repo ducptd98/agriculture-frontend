@@ -1,0 +1,69 @@
+<div style="background: url('assets/img/trust.jpeg') no-repeat center center scroll;" class="background-img">
+
+</div>
+<div class="container-fluid mt-2">
+  <div class="row">
+    <div class="col-3">
+      <app-left-filter></app-left-filter>
+    </div>
+    <div class="col-9">
+      <div class="product-content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-3">
+              <ng-container [ngTemplateOutlet]="productCard"></ng-container>
+            </div>
+            <div class="col-3">
+              <ng-container [ngTemplateOutlet]="productCard"></ng-container>
+            </div>
+            <div class="col-3">
+              <ng-container [ngTemplateOutlet]="productCard"></ng-container>
+            </div>
+            <div class="col-3">
+              <ng-container [ngTemplateOutlet]="productCard"></ng-container>
+            </div>
+            <div class="col-3">
+              <ng-container [ngTemplateOutlet]="productCard"></ng-container>
+            </div>
+            <div class="col-3">
+              <ng-container [ngTemplateOutlet]="productCard"></ng-container>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #productCard>
+  <div class="card" style="cursor: pointer" (click)="navigate(2)">
+    <img src="https://dummyimage.com/286x168/868e96/ffffff" class="card-img-top product-card-img" alt="...">
+    <div class="card-body">
+      <h6 class="card-title">Card title</h6>
+      <div class="row">
+        <div class="col">
+          <p class="card-text">{{80000 |  currency:'VND':'symbol'}}</p>
+        </div>
+        <div class="col">
+          <del class="card-text" style="color: #b3b3b3">{{80000 |  currency:'VND':true}}</del>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <ngb-rating [max]="5" [starTemplate]="t" [rate]="4.5"></ngb-rating>
+      </div>
+      <div class="row justify-content-center">
+        <a href="#" class="btn btn-danger">
+          <i class="fa fa-shopping-cart text-white " style="font-size: 1rem" aria-hidden="true">
+          </i>
+          Thêm vào giỏ
+        </a>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #t let-fill="fill">
+  <span class="star" [class.full]="fill === 100">
+    <span class="half" [style.width.%]="fill">&#9733;</span>&#9733;
+  </span>
+</ng-template>

@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import {RegisterComponent} from './pages/register/register.component';
 
 export const AppRoutes: Routes = [
   {
@@ -19,7 +20,8 @@ export const AppRoutes: Routes = [
         {
       path: '',
       loadChildren:  () => import('./layouts/admin-layout/admin-layout.module').then(m => m.AdminLayoutModule)
-  }]},
+        }]
+  },
   {
     path: '**',
     redirectTo: 'home'

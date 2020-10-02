@@ -1,0 +1,11 @@
+<div class="form-group">
+  <div class="float-left">
+    <input type="text" min="1" title="quality" [(ngModel)]="value" maxlength="12" id="qty" name="quantity" class="input-text">
+    <div class="btn_count">
+      <button id="countup" class="increase items-count" type="button" (click)="increase()"><i class="fa fa-plus"></i></button>
+
+      <button id="count-down" class="reduced items-count" type="button" (click)="decrease()"><i class="fa fa-minus"></i></button>
+    </div>
+  </div>
+
+</div>
